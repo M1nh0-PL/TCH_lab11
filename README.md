@@ -42,4 +42,24 @@ docker run -d --name web3 --network lab11net -p 8083:80 --mount type=bind,source
 
 ![](scrinki/2.png)
 
+## Sprawdzenie logów: ##
+
+web1:
+```bash
+ls -lh "/home/zorin/Studia Semestr 6/Technologie Chmurowe/lab11/web1_logs"
+```
+
+web2:
+```bash
+ls -lh "/home/zorin/Studia Semestr 6/Technologie Chmurowe/lab11/web2_logs"
+```
+
+web3:
+```bash
+ls -lh "/home/zorin/Studia Semestr 6/Technologie Chmurowe/lab11/web3_logs"
+```
+![](scrinki/6.png)
+
+
+
 
