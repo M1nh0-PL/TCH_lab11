@@ -18,3 +18,28 @@ docker network create --driver bridge lab11net
 ```bash
 docker network inspect lab11net
 ```
+
+## Uruchomienie kontenera web1
+
+```bash
+docker run -d --name web1 --network lab11net -p 8081:80 --mount type=bind,source="/home/zorin/Studia Semestr 6/Technologie Chmurowe/lab11/html",target=/usr/share/nginx/html,readonly --mount type=bind,source="/home/zorin/Studia Semestr 6/Technologie Chmurowe/lab11/web1_logs",target=/var/log/nginx nginx:latest
+```
+![](scrinki/3.png)
+
+## Uruchomienie kontenera web2
+
+```bash
+docker run -d --name web2 --network lab11net -p 8082:80 --mount type=bind,source="/home/zorin/Studia Semestr 6/Technologie Chmurowe/lab11/html",target=/usr/share/nginx/html,readonly --mount type=bind,source="/home/zorin/Studia Semestr 6/Technologie Chmurowe/lab11/web2_logs",target=/var/log/nginx nginx:latest
+```
+![](scrinki/4.png)
+
+## Uruchomienie kontenera web3
+
+```bash
+docker run -d --name web3 --network lab11net -p 8083:80 --mount type=bind,source="/home/zorin/Studia Semestr 6/Technologie Chmurowe/lab11/html",target=/usr/share/nginx/html,readonly --mount type=bind,source="/home/zorin/Studia Semestr 6/Technologie Chmurowe/lab11/web3_logs",target=/var/log/nginx nginx:latest
+```
+![](scrinki/5.png)
+
+![](scrinki/2.png)
+
+
